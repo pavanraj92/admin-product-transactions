@@ -1,0 +1,22 @@
+{
+    "name": "admin/product_transactions",
+    "description": "Handles recording and management of all financial activities related to products.",
+    "type": "library",
+    "version": "1.0.0",  
+    "license": "MIT",
+    "autoload": {
+      "psr-4": {
+        "admin\\product_transactions\\": "src/"
+      }
+    },
+    "extra": { 
+      "laravel": {
+        "providers": [
+          "admin\\product_transactions\\ProductTransactionServiceProvider"
+        ]
+      }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+  }
+  
