@@ -57,7 +57,7 @@ class TransactionManagerController extends Controller
     {
         try {
             $transaction->load('user');
-            return view('product::admin.show', compact('transaction'));
+            return view('transaction::admin.show', compact('transaction'));
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Failed to load transaction: ' . $e->getMessage());
         }

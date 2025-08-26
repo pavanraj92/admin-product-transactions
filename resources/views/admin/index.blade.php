@@ -30,7 +30,7 @@
                                     <label for="status">Status</label>
                                     <select name="status" id="status" class="form-control select2">
                                         <option value="">All</option>
-                                        @foreach(config('product.constants.transactionStatus') as $key => $label)
+                                        @foreach(config('transaction.constants.transactionStatus') as $key => $label)
                                             <option value="{{ $key }}"
                                                 {{ app('request')->query('status') == $key ? 'selected' : '' }}>
                                                 {{ $label }}
@@ -90,7 +90,7 @@
                                                 <td>{{ $transaction->amount }}</td>
                                                 <td>{{ $transaction->currency }}</td>
                                                 <td>
-                                                     {!! config('product.constants.transactionStatusLabel.' . $transaction->status, 'N/A') !!}
+                                                     {!! config('transaction.constants.transactionStatusLabel.' . $transaction->status, 'N/A') !!}
                                                 </td>
                                                 <td>
                                                     {{ $transaction->created_at ? $transaction->created_at->format(config('GET.admin_date_time_format') ?? 'M d, Y') : '—' }}

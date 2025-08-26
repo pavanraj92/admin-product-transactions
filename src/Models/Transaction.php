@@ -81,7 +81,9 @@ class Transaction extends Model
 
     public function order()
     {
-        return $this->belongsTo(Order::class);
+        if (class_exists(\admin\products\Models\Order::class)) {
+            return $this->belongsTo(\admin\products\Models\Order::class);
+        }
     }
 
     public static function getPerPageLimit(): int
