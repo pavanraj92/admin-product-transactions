@@ -46,10 +46,7 @@ Handles recording and management of all financial activities related to products
 | Method | Endpoint                                 | Description                              |
 | ------ | ---------------------------------------- | ---------------------------------------- |
 | GET    | /transactions                            | List all transactions                    |
-| POST   | /transactions                            | Create a new transaction                 |
-| GET    | /transactions/{transaction}              | Get transaction details                  |
-| PUT    | /transactions/{transaction}              | Update a transaction                     |
-| DELETE | /transactions/{transaction}              | Delete a transaction                     |
+| GET    | /transactions/{transaction}              | Get transaction details                  |                    |
 
 ---
 
