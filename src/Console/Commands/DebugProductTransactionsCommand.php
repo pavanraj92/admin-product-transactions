@@ -36,7 +36,7 @@ class DebugProductTransactionsCommand extends Command
         $this->info("\n👀 View Loading Priority:");
         $viewPaths = [
             'Module views' => base_path('Modules/Transactions/resources/views'),
-            'Published views' => resource_path('views/admintransactions'),
+            'Published views' => resource_path('views/admin/transactions'),
             'Package views' => base_path('packages/admin/product_transactions/resources/views'),
         ];
         
