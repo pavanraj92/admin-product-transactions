@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Kyslik\ColumnSortable\Sortable;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use admin\users\Models\User;
+use admin\products\Models\Order;
 
 class Transaction extends Model
 {
@@ -74,16 +76,12 @@ class Transaction extends Model
     
     public function user()
     {
-        if (class_exists(\admin\users\Models\User::class)) {
-            return $this->belongsTo(\admin\users\Models\User::class, 'user_id');
-        }
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     public function order()
     {
-        if (class_exists(\admin\products\Models\Order::class)) {
-            return $this->belongsTo(\admin\products\Models\Order::class);
-        }
+        return $this->belongsTo(Order::class);
     }
 
     public static function getPerPageLimit(): int
